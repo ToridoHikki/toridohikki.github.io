@@ -3,7 +3,12 @@
 <head>
 	<title>MY FIRST JAVASCRIPT</title>
 </head>
-<body>
+<body onpageshow='myFunction()'>
+	<script>
+		function myFunction(){
+			alert('walcome!');
+		}
+	</script>
 	<h2>My 1st javacript</h2>
 		<button type="button" onclick="document.getElementById('demo').innerHTML =Date()">
 			Click me to display Date and Time</button>
@@ -27,6 +32,7 @@
 		document.getElementById("demo3").style.color = "red";
 		document.getElementById("demo3").style.backgroundColor="yellow";
 	</script>
+
 
 </body>
 </html>
