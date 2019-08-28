@@ -32,7 +32,20 @@
 		document.getElementById("demo3").style.color = "red";
 		document.getElementById("demo3").style.backgroundColor="yellow";
 	</script>
-
+	<select id ="mySelect"
+		onchange="myFunction1()">
+		<option value ="SamSung">SamSung
+		<option value ="Iphone">Iphone
+		<option value ="Nokia">Nokia
+	</select>
+	<p>When you select a new phone, a function is triggered which outputs the value of the selected car.</p>
+	<p id = "demo4"></p>
+	<script>
+		function myFunction1(){
+			var x = document.getElementById("mySelect").value;
+			document.getElementById("demo4").innerHTML = "You selected: "+ x;
+		}
+	</script>
 
 </body>
 </html>
