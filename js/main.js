@@ -33,11 +33,33 @@ function inputMessage(){
 */
 
 //Slide Images
-var slideIndex = 1;
-showSlides(slideIndex);
 var isPlaying = true;
 var myIndex = 0;
 carousel();
+
+function carousel() {
+  if (isPlaying) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+  }
+  setTimeout(carousel, 2000);
+}
+function toggleSlideshow() {
+    isPlaying = !isPlaying;
+}
+var div = document.getElementById("images");
+div.addEventListener('click', function (event) {
+    toggleSlideshow();
+});
+
+var slideIndex = 1;
+showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -62,23 +84,4 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += "active";
 }
-function carousel() {
-  if (isPlaying) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-  }
-  setTimeout(carousel, 2000);
-}
-function toggleSlideshow() {
-    isPlaying = !isPlaying;
-}
-var div = document.getElementById("images");
-div.addEventListener('click', function (event) {
-    toggleSlideshow();
-});
+

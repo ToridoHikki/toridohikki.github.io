@@ -22,11 +22,12 @@ body {
 	background-color: #ffffff;
 	overflow: auto;
 }
-/*img.sticky {
+.sticky {
   position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}*/
+  position: fixed;
+ /* top: 90px;*/
+ margin-top: 90px;
+}
 * {box-sizing: border-box}
 .mySlides {display: none}
 img {vertical-align: middle;}
