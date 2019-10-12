@@ -33,7 +33,7 @@ function inputMessage(){
 */
 
 //Slide Images
-var isPlaying = false;
+var isPlaying = true;
 var myIndex = 0;
 carousel();
 
