@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
 	<title>Huynh Nhu</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
 </head>
 <body>
 	<div class = "row">
@@ -74,6 +77,20 @@
 				</ul>
 			</p>
 		<hr>
+		<h2><u>COURSE</u></h2>
+		<div>
+			<table class="table table-hover">
+				<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+				</tr>
+				</thead>
+				<tbody id="table-body">
+
+				</tbody>
+			</table>
+		</div>
 		<h2><u>CONTACT</u></h2>
 			<p>
 				<ul>
@@ -90,7 +107,7 @@
 				<form action="/action_page.php">
 					<div>
 						Your email:<br>
-						<input onclick="inputEmail()" type="text" name="youremail" id="email">
+						<input onclick="inputEmail()" type="email" name="youremail" id="email">
 						<div id="error-email"></div>
 						<br>
 					</div>
@@ -109,9 +126,27 @@
 	
 
 <script src ="js/main.js"></script>
-<!-- Type &nbsp; to add a single space.
-Type &ensp; to add 2 spaces.
-Type &emsp; to add 4 spaces. -->
+<script>
+	$(document).ready(function ()  {
+		$.get("http://demo6370041.mockable.io/getcourses", function(data, status){
+			for (var i = 0; i < data.data.length; i++) {
+				var id = data.data[i].id;
+				var name = data.data[i].name;
+				// them dong vao
+				tr = $("<tr></tr>");
+				tr.append("<td>"+ id + "</td>");
+				tr.append("<td>"+ name +"</td>");
+				/*tr.append("<td>"+ email + "</td>");
+                /!*tr.append("<td>"+ phone + "</td>");*!/
+              /!*  tr.append("<a href='#'>Edit</a>  |  <a href='#' onclick='confirmRemoval()'>Delete</a>")*!/
+    */                $("#table-body").append(tr);
+			}
+		},"json");
+
+</script>
+	<!-- Type &nbsp; to add a single space.
+    Type &ensp; to add 2 spaces.
+    Type &emsp; to add 4 spaces. -->
 
 
 </body>
