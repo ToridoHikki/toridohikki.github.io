@@ -18,13 +18,14 @@
                 tr.append("<a href='#'>Edit</a>  |  <a href='#' onclick='confirmRemoval()'>Delete</a>")*/
                 $("#table-body").append(tr);
             }
-            $("#nhu").DataTable({
-            	"paging" = 4;
+        $(document).ready( function () {
+            $('#nhu').DataTable({
+                searching: false
             });
+
+        } );
+            
         },"json");
     })
 
-/*$(document).ready( function () {
-    $("#nhu").DataTable();
-} );
-*/
+
