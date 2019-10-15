@@ -20,11 +20,13 @@
             }
         $(document).ready( function () {
             $('#nhu').DataTable({
-                searching: false
+                searching: false,
+                paging: true,
+                lengthMenu:[4],
+                lengthChange: false
             });
-
         } );
-            
+
         },"json");
     })
 
