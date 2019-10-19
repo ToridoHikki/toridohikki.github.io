@@ -2,11 +2,10 @@
 <html>
 <head>
 	<title>Huynh Nhu</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
 </head>
 <body>
@@ -14,7 +13,7 @@
 		<h1>RESUME</h1>
 		<hr>
 	</div>
-	<div class = "col-1 sticky">
+	<div class = "col1 sticky">
 		<div class="content">
 			<h2><u>ABOUT ME</u></h2>
 			<div class="slideshow-conatiner ">
@@ -47,7 +46,7 @@
 		</div>
 	<hr>
 	</div>
-	<div class="col-2">
+	<div class="col2">
 		<div class="content">
 				<h2><u>EDUCATION</u></h2>
 			<p>
@@ -81,7 +80,7 @@
 		<hr>
 		<h2><u>COURSE</u></h2>
 		<div>
-			<table id="nhu" class="table table-hover">
+			<table  id = "table-id"class="table table-bordered">
 				<thead>
 				<tr>
 					<th>ID</th>
@@ -91,6 +90,14 @@
 				<tbody id="table-body">
 				</tbody>
 			</table>
+		</div>
+		<div class="float-right">
+			<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+			  <div class="btn-group mr-2" role="group" aria-label="First group">
+			    <button id="btn1" type="button" class="btn btn-secondary">1</button>
+			    <button id="btn2" type="button" class="btn btn-secondary">2</button>
+			  </div>
+			</div>
 		</div>
 		<h2><u>CONTACT</u></h2>
 			<p>

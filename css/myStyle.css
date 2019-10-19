@@ -4,14 +4,13 @@ body {
 .row {
 	margin-left: 20px;
 }
-.col-1 {
+.col1 {
 	float: left;
 	width: 25%;
 	position: -webkit-sticky;
-  	position: sticky;
-  	top: 0;
+  position: fixed;
 }
-.col-2{
+.col2{
 	float: right;
 	width: 75%;
 }
@@ -22,12 +21,12 @@ body {
 	background-color: #ffffff;
 	overflow: auto;
 }
-.sticky {
+/*.sticky {
   position: -webkit-sticky;
-  position: fixed;
- /* top: 90px;*/
- margin-top: 90px;
-}
+  position: fixed;*/
+ /* top: 90px;
+ margin-top: 70px;
+}*/
 * {box-sizing: border-box}
 .mySlides {display: none}
 img {vertical-align: middle;}
@@ -132,3 +131,10 @@ img {vertical-align: middle;}
 		width: 100%;
 	}
 }
+
+/*table tr {
+  display: none;
+}*/
+/*#tr5{
+  display: none;
+}*/
